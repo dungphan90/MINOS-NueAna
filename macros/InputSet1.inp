@@ -1,0 +1,25 @@
+//Input Number of POT
+BEGINDATA
+
+METHOD 1
+
+FILE   {GridSet2.txt}
+
+ENDDATA
+
+BEGINERROR
+NC            { 0.10}
+NuMu          { 0.10}
+BNue          { 0.20}
+NuTau         { 0.50}
+SigNue        { 0.10}
+ENDERROR
+
+BEGINSET
+NC            { 29, 30, 0.05}
+NuMu          {  6,  8, 0.05}
+BNue          {  2,  3, 0.05}
+NuTau         {  1,  2, 0.05}
+SigNue        {  0, 80, 0.05}
+ENDSET
+

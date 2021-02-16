@@ -1,0 +1,16 @@
+
+muon extraction from electrons
+
+electron can fit nicely to actual electron 21037101 7
+
+properly split 21437101 38
+
+
+maybe make first set of chains, find the electron to get a vertex... and then make the rest of the chains
+and also be able to use the vertex from the pmf as a guess!
+
+
+
+chain extension on all found chains, starting with largest/longest first
+
+primary electron needs to be done over a chain path , not just a single chain

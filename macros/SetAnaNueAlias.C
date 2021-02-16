@@ -1,0 +1,421 @@
+void SetAnaNueAlias(TTree *chain)
+{
+  //the basics:
+  chain->SetAlias("detector","NueRecord.fHeader.fVldContext.fDetector");
+  chain->SetAlias("simflag","NueRecord.fHeader.fVldContext.fSimFlag");
+  chain->SetAlias("ts_sec","NueRecord.fHeader.fVldContext.fTimeStamp.fSec");
+  chain->SetAlias("ts_nsec","NueRecord.fHeader.fVldContext.fTimeStamp.fNanoSec");
+  chain->SetAlias("snarl","NueRecord.fHeader.fSnarl");
+  chain->SetAlias("run","NueRecord.fHeader.fRun");
+  chain->SetAlias("subrun","NueRecord.fHeader.fSubRun");
+  chain->SetAlias("event","NueRecord.fHeader.fEvtNo");
+  chain->SetAlias("nevent","NueRecord.fHeader.fEvents");
+  chain->SetAlias("trklen","NueRecord.fHeader.fTrackLength");
+  chain->SetAlias("foundsr","NueRecord.fHeader.foundSR");
+  chain->SetAlias("foundmc","NueRecord.fHeader.foundMC");
+  chain->SetAlias("foundth","NueRecord.fHeader.foundTH");
+
+  //shwfit package:
+  chain->SetAlias("sf_par_a","NueRecord.shwfit.par_a");
+  chain->SetAlias("sf_par_b","NueRecord.shwfit.par_b");
+  chain->SetAlias("sf_par_e0","NueRecord.shwfit.par_e0");
+  chain->SetAlias("sf_chisq","NueRecord.shwfit.chisq");
+  chain->SetAlias("sf_shwmax","NueRecord.shwfit.shwmax");
+  chain->SetAlias("sf_shwmaxplane","NueRecord.shwfit.shwmaxplane");
+  chain->SetAlias("sf_conv","NueRecord.shwfit.conv");
+  chain->SetAlias("sf_chisq_ndf","NueRecord.shwfit.chisq_ndf");
+  chain->SetAlias("sf_e0_pe_ratio","NueRecord.shwfit.e0_pe_ratio");
+  chain->SetAlias("sf_caldet_comp","NueRecord.shwfit.caldet_comp");
+  chain->SetAlias("sf_max_pe_plane","NueRecord.shwfit.max_pe_plane");
+  chain->SetAlias("sf_shwmaxplane_diff","NueRecord.shwfit.shwmaxplane_diff");
+  chain->SetAlias("sf_hiPhStripCountM4","NueRecord.shwfit.hiPhStripCountM4");
+  chain->SetAlias("sf_hiPhPlaneCountM4","NueRecord.shwfit.hiPhPlaneCountM4");
+  chain->SetAlias("sf_hiPhStripCountM2","NueRecord.shwfit.hiPhStripCountM2");
+  chain->SetAlias("sf_hiPhPlaneCountM2","NueRecord.shwfit.hiPhPlaneCountM2");
+  chain->SetAlias("sf_hiPhStripCount","NueRecord.shwfit.hiPhStripCount");
+  chain->SetAlias("sf_hiPhPlaneCount","NueRecord.shwfit.hiPhPlaneCount");
+  chain->SetAlias("sf_hiPhStripCountP2","NueRecord.shwfit.hiPhStripCountP2");
+  chain->SetAlias("sf_hiPhPlaneCountP2","NueRecord.shwfit.hiPhPlaneCountP2");
+  chain->SetAlias("sf_hiPhStripCountP4","NueRecord.shwfit.hiPhStripCountP4");
+  chain->SetAlias("sf_hiPhPlaneCountP4","NueRecord.shwfit.hiPhPlaneCountP4");
+  chain->SetAlias("sf_u_asym_peak","NueRecord.shwfit.u_asym_peak");
+  chain->SetAlias("sf_u_asym_vert","NueRecord.shwfit.u_asym_vert");
+  chain->SetAlias("sf_u_molrad_peak","NueRecord.shwfit.u_molrad_peak");
+  chain->SetAlias("sf_u_molrad_vert","NueRecord.shwfit.u_molrad_vert");
+  chain->SetAlias("sf_u_mean","NueRecord.shwfit.u_mean");
+  chain->SetAlias("sf_u_rms","NueRecord.shwfit.u_rms");
+  chain->SetAlias("sf_u_skew","NueRecord.shwfit.u_skew");
+  chain->SetAlias("sf_u_kurt","NueRecord.shwfit.u_kurt");
+  chain->SetAlias("sf_v_asym_peak","NueRecord.shwfit.v_asym_peak");
+  chain->SetAlias("sf_v_asym_vert","NueRecord.shwfit.v_asym_vert");
+  chain->SetAlias("sf_v_molrad_peak","NueRecord.shwfit.v_molrad_peak");
+  chain->SetAlias("sf_v_molrad_vert","NueRecord.shwfit.v_molrad_vert");
+  chain->SetAlias("sf_v_mean","NueRecord.shwfit.v_mean");
+  chain->SetAlias("sf_v_rms","NueRecord.shwfit.v_rms");
+  chain->SetAlias("sf_v_skew","NueRecord.shwfit.v_skew");
+  chain->SetAlias("sf_v_kurt","NueRecord.shwfit.v_kurt");
+  chain->SetAlias("sf_uv_asym_peak","NueRecord.shwfit.uv_asym_peak");
+  chain->SetAlias("sf_uv_asym_vert","NueRecord.shwfit.uv_asym_vert");
+  chain->SetAlias("sf_uv_molrad_peak","NueRecord.shwfit.uv_molrad_peak");
+  chain->SetAlias("sf_uv_molrad_vert","NueRecord.shwfit.uv_molrad_vert");
+  chain->SetAlias("sf_uv_mean","NueRecord.shwfit.uv_mean");
+  chain->SetAlias("sf_uv_rms","NueRecord.shwfit.uv_rms");
+  chain->SetAlias("sf_uv_skew","NueRecord.shwfit.uv_skew");
+  chain->SetAlias("sf_uv_kurt","NueRecord.shwfit.uv_kurt");
+  chain->SetAlias("sf_uv_ratio","NueRecord.shwfit.uv_ratio");
+
+  //hitcalc package:
+  chain->SetAlias("hc_fHitTotalEnergy","NueRecord.hitcalc.fHitTotalEnergy");
+  chain->SetAlias("hc_fHitTransEnergy","NueRecord.hitcalc.fHitTransEnergy");
+  chain->SetAlias("hc_fHitLongEnergy","NueRecord.hitcalc.fHitLongEnergy");
+  chain->SetAlias("hc_fHitTransCMEnergy","NueRecord.hitcalc.fHitTransCMEnergy");
+  chain->SetAlias("hc_fHitTransEnergyRatio","NueRecord.hitcalc.fHitTransEnergyRatio");
+  chain->SetAlias("hc_fHitLongEnergyRatio","NueRecord.hitcalc.fHitLongEnergyRatio");
+  chain->SetAlias("hc_fHitTransLongEnergyRatio","NueRecord.hitcalc.fHitTransLongEnergyRatio");
+  chain->SetAlias("hc_fHitTransCMEnergyRatio","NueRecord.hitcalc.fHitTransCMEnergyRatio");
+  chain->SetAlias("hc_fHitFarMomBalance","NueRecord.hitcalc.fHitFarMomBalance");
+  chain->SetAlias("hc_fHitPeakMomBalance","NueRecord.hitcalc.fHitPeakMomBalance");
+  chain->SetAlias("hc_fHitFarAngle","NueRecord.hitcalc.fHitFarAngle");
+  chain->SetAlias("hc_fHitPeakAngle","NueRecord.hitcalc.fHitPeakAngle");
+
+  //angcluster package:
+  chain->SetAlias("ac_fACluRmsShwAxis","NueRecord.angcluster.fACluRmsShwAxis");
+  chain->SetAlias("ac_fACluRmsZAxis","NueRecord.angcluster.fACluRmsZAxis");
+  chain->SetAlias("ac_fACluShwDirX","NueRecord.angcluster.fACluShwDirX");
+  chain->SetAlias("ac_fACluShwDirY","NueRecord.angcluster.fACluShwDirY");
+  chain->SetAlias("ac_fACluShwDirZ","NueRecord.angcluster.fACluShwDirZ");
+  chain->SetAlias("acf_fACluFitParA","NueRecord.angclusterfit.fACluFitParA");
+  chain->SetAlias("acf_fACluFitParB","NueRecord.angclusterfit.fACluFitParB");
+  chain->SetAlias("acf_fACluFitParLongE0","NueRecord.angclusterfit.fACluFitParLongE0");
+  chain->SetAlias("acf_fACluFitShwMax","NueRecord.angclusterfit.fACluFitShwMax");
+  chain->SetAlias("acf_fACluFitE0EnergyRatio","NueRecord.angclusterfit.fACluFitE0EnergyRatio");
+  chain->SetAlias("acf_fACluFitParL1","NueRecord.angclusterfit.fACluFitParL1");
+  chain->SetAlias("acf_fACluFitParL2","NueRecord.angclusterfit.fACluFitParL2");
+  chain->SetAlias("acf_fACluFitParC12","NueRecord.angclusterfit.fACluFitParC12");
+  chain->SetAlias("acf_fACluFitParTransE0","NueRecord.angclusterfit.fACluFitParTransE0");
+  chain->SetAlias("acf_fACluFitLongChiSq","NueRecord.angclusterfit.fACluFitLongChiSq");
+  chain->SetAlias("acf_fACluFitLongConv","NueRecord.angclusterfit.fACluFitLongConv");
+  chain->SetAlias("acf_fACluFitLongNDF","NueRecord.angclusterfit.fACluFitLongNDF");
+  chain->SetAlias("acf_fACluFitTransChiSq","NueRecord.angclusterfit.fACluFitTransChiSq");
+  chain->SetAlias("acf_fACluFitTransConv","NueRecord.angclusterfit.fACluFitTransConv");
+  chain->SetAlias("acf_fACluFitTransNDF","NueRecord.angclusterfit.fACluFitTransNDF");
+  chain->SetAlias("acf_fACluFitAsymPeak","NueRecord.angclusterfit.fACluFitAsymPeak");
+  chain->SetAlias("acf_fACluFitAsymVert","NueRecord.angclusterfit.fACluFitAsymVert");
+  chain->SetAlias("acf_fACluFitMolRadPeak","NueRecord.angclusterfit.fACluFitMolRadPeak");
+  chain->SetAlias("acf_fACluFitMolRadVert","NueRecord.angclusterfit.fACluFitMolRadVert");
+  chain->SetAlias("acf_fACluFitMean","NueRecord.angclusterfit.fACluFitMean");
+  chain->SetAlias("acf_fACluFitRMS","NueRecord.angclusterfit.fACluFitRMS");
+  chain->SetAlias("acf_fACluFitSkew","NueRecord.angclusterfit.fACluFitSkew");
+  chain->SetAlias("acf_fACluFitKurt","NueRecord.angclusterfit.fACluFitKurt");
+
+
+  //mstvars package:
+  chain->SetAlias("mst_enmsg","NueRecord.mstvars.enmsg");
+  chain->SetAlias("mst_ew1","NueRecord.mstvars.ew1");
+  chain->SetAlias("mst_enn1","NueRecord.mstvars.enn1");
+  chain->SetAlias("mst_esm1","NueRecord.mstvars.esm1");
+  chain->SetAlias("mst_ewtot","NueRecord.mstvars.ewtot");
+  chain->SetAlias("mst_enntot","NueRecord.mstvars.enntot");
+  chain->SetAlias("mst_esmtot","NueRecord.mstvars.esmtot");
+  chain->SetAlias("mst_e4w","NueRecord.mstvars.e4w");
+  chain->SetAlias("mst_e4sm","NueRecord.mstvars.e4sm");
+  chain->SetAlias("mst_e4nn","NueRecord.mstvars.e4nn");
+  chain->SetAlias("mst_eb1","NueRecord.mstvars.eb1");
+  chain->SetAlias("mst_eb25","NueRecord.mstvars.eb25");
+  chain->SetAlias("mst_enbranch","NueRecord.mstvars.enbranch");
+  chain->SetAlias("mst_onmsg","NueRecord.mstvars.onmsg");
+  chain->SetAlias("mst_ow1","NueRecord.mstvars.ow1");
+  chain->SetAlias("mst_onn1","NueRecord.mstvars.onn1");
+  chain->SetAlias("mst_osm1","NueRecord.mstvars.osm1");
+  chain->SetAlias("mst_owtot","NueRecord.mstvars.owtot");
+  chain->SetAlias("mst_onntot","NueRecord.mstvars.onntot");
+  chain->SetAlias("mst_osmtot","NueRecord.mstvars.osmtot");
+  chain->SetAlias("mst_o4w","NueRecord.mstvars.o4w");
+  chain->SetAlias("mst_o4sm","NueRecord.mstvars.o4sm");
+  chain->SetAlias("mst_o4nn","NueRecord.mstvars.o4nn");
+  chain->SetAlias("mst_ob1","NueRecord.mstvars.ob1");
+  chain->SetAlias("mst_ob25","NueRecord.mstvars.ob25");
+  chain->SetAlias("mst_onbranch","NueRecord.mstvars.onbranch");
+  chain->SetAlias("mst_eallw1","NueRecord.mstvars.eallw1");
+  chain->SetAlias("mst_oallw1","NueRecord.mstvars.oallw1");
+  chain->SetAlias("mst_eallm1","NueRecord.mstvars.eallm1");
+  chain->SetAlias("mst_oallm1","NueRecord.mstvars.oallm1");
+  chain->SetAlias("mst_eeprob","NueRecord.mstvars.eeprob");
+  chain->SetAlias("mst_oeprob","NueRecord.mstvars.oeprob");
+  chain->SetAlias("mst_ealpha","NueRecord.mstvars.ealpha");
+  chain->SetAlias("mst_oalpha","NueRecord.mstvars.oalpha");
+  chain->SetAlias("mst_ebeta","NueRecord.mstvars.ebeta");
+  chain->SetAlias("mst_obeta","NueRecord.mstvars.obeta");
+
+  //fracvars package:
+  chain->SetAlias("fv_fract_1_plane","NueRecord.fracvars.fract_1_plane");
+  chain->SetAlias("fv_fract_2_planes","NueRecord.fracvars.fract_2_planes");
+  chain->SetAlias("fv_fract_3_planes","NueRecord.fracvars.fract_3_planes");
+  chain->SetAlias("fv_fract_4_planes","NueRecord.fracvars.fract_4_planes");
+  chain->SetAlias("fv_fract_5_planes","NueRecord.fracvars.fract_5_planes");
+  chain->SetAlias("fv_fract_6_planes","NueRecord.fracvars.fract_6_planes");
+  chain->SetAlias("fv_fract_2_counters","NueRecord.fracvars.fract_2_counters");
+  chain->SetAlias("fv_fract_4_counters","NueRecord.fracvars.fract_4_counters");
+  chain->SetAlias("fv_fract_6_counters","NueRecord.fracvars.fract_6_counters");
+  chain->SetAlias("fv_fract_8_counters","NueRecord.fracvars.fract_8_counters");
+  chain->SetAlias("fv_fract_10_counters","NueRecord.fracvars.fract_10_counters");
+  chain->SetAlias("fv_fract_12_counters","NueRecord.fracvars.fract_12_counters");
+  chain->SetAlias("fv_fract_road","NueRecord.fracvars.fract_road");
+  chain->SetAlias("fv_shw_max","NueRecord.fracvars.shw_max");
+  chain->SetAlias("fv_shw_nstp","NueRecord.fracvars.shw_nstp");
+  chain->SetAlias("fv_shw_npl","NueRecord.fracvars.shw_npl");
+  chain->SetAlias("fv_passcuts","NueRecord.fracvars.passcuts");
+  chain->SetAlias("fv_pid","NueRecord.fracvars.pid");
+  chain->SetAlias("fv_pid1","NueRecord.fracvars.pid1");
+
+
+  //subshowervars package:
+  chain->SetAlias("ss_ncluster","NueRecord.subshowervars.ncluster");
+  chain->SetAlias("ss_nclusterU","NueRecord.subshowervars.nclusterU");
+  chain->SetAlias("ss_nclusterV","NueRecord.subshowervars.nclusterV");
+  chain->SetAlias("ss_nPhysClusterU","NueRecord.subshowervars.nPhysClusterU");
+  chain->SetAlias("ss_nPhysClusterV","NueRecord.subshowervars.nPhysClusterV");
+  chain->SetAlias("ss_nstp0U","NueRecord.subshowervars.nstp0U");
+  chain->SetAlias("ss_nstp0V","NueRecord.subshowervars.nstp0V");
+  chain->SetAlias("ss_E2to1U","NueRecord.subshowervars.E2to1U");
+  chain->SetAlias("ss_E2to1V","NueRecord.subshowervars.E2to1V");
+  chain->SetAlias("ss_PHAvgIDU","NueRecord.subshowervars.PHAvgIDU");
+  chain->SetAlias("ss_PHAvgIDV","NueRecord.subshowervars.PHAvgIDV");
+  chain->SetAlias("ss_PHAvgProbEMU","NueRecord.subshowervars.PHAvgProbEMU");
+  chain->SetAlias("ss_PHAvgProbEMV","NueRecord.subshowervars.PHAvgProbEMV");
+  chain->SetAlias("ss_PHFracRMSU","NueRecord.subshowervars.PHFracRMSU");
+  chain->SetAlias("ss_PHFracRMSV","NueRecord.subshowervars.PHFracRMSV");
+  chain->SetAlias("ss_PHAvgDevU","NueRecord.subshowervars.PHAvgDevU");
+  chain->SetAlias("ss_PHAvgDevV","NueRecord.subshowervars.PHAvgDevV");
+  chain->SetAlias("ss_pid","NueRecord.subshowervars.pid");
+
+  //not sure what this is...
+  chain->SetAlias("ann_pid","NueRecord.ann.pid");
+
+  //mdadiscrim pacakge:
+  chain->SetAlias("mda_pid_nue","NueRecord.mdadiscrim.fMdaPIDnue");
+  chain->SetAlias("mda_pid_nc","NueRecord.mdadiscrim.fMdaPIDnc");
+  chain->SetAlias("mda_pid_numu","NueRecord.mdadiscrim.fMdaPIDnumu");
+  chain->SetAlias("mda_pid_nutau","NueRecord.mdadiscrim.fMdaPIDnutau");
+  chain->SetAlias("mda_class","NueRecord.mdadiscrim.fMdaClass");
+  
+  //treepid package:
+  chain->SetAlias("tpid_pass_basic","NueRecord.treepid.fPassBCuts");
+  chain->SetAlias("tpid_cut_pid","NueRecord.treepid.fCutPID");
+  chain->SetAlias("tpid_cut_class","NueRecord.treepid.fCutClass");
+
+
+  //analysis information:
+  chain->SetAlias("is_fid","NueRecord.anainfo.inFiducialVolume");
+  chain->SetAlias("is_cev","NueRecord.anainfo.isFullyContained");
+  chain->SetAlias("good_shw","NueRecord.anainfo.isGoodShower");
+  chain->SetAlias("pass_basic","NueRecord.anainfo.passesCuts");
+  chain->SetAlias("pass","NueRecord.anainfo.pass");
+  chain->SetAlias("isNC","NueRecord.anainfo.isNC");
+  chain->SetAlias("isCC","NueRecord.anainfo.isCC");
+  chain->SetAlias("pid_cut","NueRecord.anainfo.separationParameterCut");
+  chain->SetAlias("pid","NueRecord.anainfo.separationParameter");
+  chain->SetAlias("pid_pan","NueRecord.anainfo.separationParameterPAN");
+  chain->SetAlias("reco_enu","NueRecord.anainfo.recoNuEnergy");
+  chain->SetAlias("reco_emu","NueRecord.anainfo.recoMuEnergy");
+  chain->SetAlias("reco_eshw","NueRecord.anainfo.recoShowerEnergy");
+  chain->SetAlias("reco_qe_enu","NueRecord.anainfo.recoQENuEnergy");
+  chain->SetAlias("reco_qe_q2","NueRecord.anainfo.recoQEQ2");
+  chain->SetAlias("reco_y","NueRecord.anainfo.recoHadronicY");
+  chain->SetAlias("reco_nu_dcos","NueRecord.anainfo.recoNuDCos");
+  chain->SetAlias("reco_z_dcos","NueRecord.anainfo.recoMuDCosZVtx");
+  chain->SetAlias("reco_vtxx","NueRecord.anainfo.recoVtxX");
+  chain->SetAlias("reco_vtxy","NueRecord.anainfo.recoVtxY");
+  chain->SetAlias("reco_vtxz","NueRecord.anainfo.recoVtxZ");
+  chain->SetAlias("reco_vtxr","NueRecord.anainfo.recoVtxR");
+  chain->SetAlias("reco_evtlen","NueRecord.anainfo.recoEventLength");
+  chain->SetAlias("reco_trklen","NueRecord.anainfo.recoTrackLength");
+  chain->SetAlias("trkmom","NueRecord.anainfo.recoTrackMomentum");
+  chain->SetAlias("trkrange","NueRecord.anainfo.recoTrackRange");
+  chain->SetAlias("reco_qperr","NueRecord.anainfo.recoSigmaQoverP");
+  chain->SetAlias("anainfo_weight","NueRecord.anainfo.weight");
+  chain->SetAlias("anainfo_error","NueRecord.anainfo.error");
+  chain->SetAlias("anainfo_eventInSnarl","NueRecord.anainfo.eventInSnarl");
+
+
+  //srevent info:
+  chain->SetAlias("evt_index","NueRecord.srevent.index");
+  chain->SetAlias("evt_ph","NueRecord.srevent.pulseHeight");
+  chain->SetAlias("evt_gev","NueRecord.srevent.energyGeV");
+  chain->SetAlias("evt_pln_beg","NueRecord.srevent.begPlane");
+  chain->SetAlias("evt_pln_end","NueRecord.srevent.endPlane");
+  chain->SetAlias("evt_npln","NueRecord.srevent.planes");
+  chain->SetAlias("evt_nstp","NueRecord.srevent.totalStrips");
+  chain->SetAlias("evt_nstp_pass","NueRecord.srevent.passStrips");
+  chain->SetAlias("nshower","NueRecord.srevent.showers");
+  chain->SetAlias("ntrack","NueRecord.srevent.tracks");
+  chain->SetAlias("evt_vtxx","NueRecord.srevent.vtxX");
+  chain->SetAlias("evt_vtxy","NueRecord.srevent.vtxY");
+  chain->SetAlias("evt_vtxz","NueRecord.srevent.vtxZ");
+  chain->SetAlias("evt_vtxt","NueRecord.srevent.vertexTime");
+  chain->SetAlias("evt_vtxMetersToBeam","NueRecord.srevent.vtxMetersToBeam");
+  chain->SetAlias("evt_vtxMetersToCoil","NueRecord.srevent.vtxMetersToCoil");
+  chain->SetAlias("evt_vtxMetersToCloseEdge","NueRecord.srevent.vtxMetersToCloseEdge");
+  chain->SetAlias("evt_timelen","NueRecord.srevent.timeLength");
+  chain->SetAlias("evt_ph_meu","NueRecord.srevent.phMeu");
+  chain->SetAlias("evt_ph_sigcor_meu","NueRecord.srevent.sigcormeu");
+  chain->SetAlias("evt_ph_nuegev","NueRecord.srevent.phNueGeV");
+  chain->SetAlias("trigger_pass","NueRecord.srevent.triggerPass");
+  chain->SetAlias("hotch","NueRecord.srevent.hotch");
+
+  //srshower info:
+  chain->SetAlias("shw_npln","NueRecord.srshower.planes");
+  chain->SetAlias("shw_nstp","NueRecord.srshower.totalStrips");
+  chain->SetAlias("shw_pln_beg","NueRecord.srshower.begPlane");
+  chain->SetAlias("shw_pln_end","NueRecord.srshower.endPlane");
+  chain->SetAlias("shw_vtxx","NueRecord.srshower.vtxX");
+  chain->SetAlias("shw_vtxy","NueRecord.srshower.vtxY");
+  chain->SetAlias("shw_vtxz","NueRecord.srshower.vtxZ");
+  chain->SetAlias("shw_dcosx","NueRecord.srshower.dcosX");
+  chain->SetAlias("shw_dcosy","NueRecord.srshower.dcosY");
+  chain->SetAlias("shw_dcosz","NueRecord.srshower.dcosZ");
+  chain->SetAlias("shw_ph","NueRecord.srshower.pulseHeight");
+  chain->SetAlias("shw_linCCgev","NueRecord.srshower.linearCCGeV");
+  chain->SetAlias("shw_linNCgev","NueRecord.srshower.linearNCGeV");
+  chain->SetAlias("shw_dwtCCgev","NueRecord.srshower.deweightCCGeV");
+  chain->SetAlias("shw_dwtNCgev","NueRecord.srshower.deweightNCGeV");
+  chain->SetAlias("shw_stripRatio","NueRecord.srshower.stripRatio");
+  chain->SetAlias("shw_planeRatio","NueRecord.srshower.planeRatio");
+  chain->SetAlias("shw_pulseHeightRatio","NueRecord.srshower.pulseHeightRatio");
+  chain->SetAlias("shw_ph_meu","NueRecord.srshower.phMeu");
+  chain->SetAlias("shw_ph_nuegev","NueRecord.srshower.phNueGeV");
+
+  //srtrack info:
+  chain->SetAlias("trk_npln","NueRecord.srtrack.planes");
+  chain->SetAlias("trk_nstp","NueRecord.srtrack.totalStrips");
+  chain->SetAlias("trk_ph","NueRecord.srtrack.pulseHeight");
+  chain->SetAlias("trk_mom_fit","NueRecord.srtrack.fitMomentum");
+  chain->SetAlias("trk_mom_range","NueRecord.srtrack.rangeMomentum");
+  chain->SetAlias("trk_qperr","NueRecord.srtrack.sigmaQoverP");
+  chain->SetAlias("trk_pln_beg","NueRecord.srtrack.begPlane");
+  chain->SetAlias("trk_pln_end","NueRecord.srtrack.endPlane");
+  chain->SetAlias("trk_pln_begU","NueRecord.srtrack.begPlaneU");
+  chain->SetAlias("trk_pln_endU","NueRecord.srtrack.endPlaneU");
+  chain->SetAlias("trk_pln_begV","NueRecord.srtrack.begPlaneV");
+  chain->SetAlias("trk_pln_endV","NueRecord.srtrack.endPlaneV");
+  chain->SetAlias("trk_length","NueRecord.srtrack.length");
+  chain->SetAlias("trk_vtxx","NueRecord.srtrack.vtxX");
+  chain->SetAlias("trk_vtxy","NueRecord.srtrack.vtxY");
+  chain->SetAlias("trk_vtxz","NueRecord.srtrack.vtxZ");
+  chain->SetAlias("trk_vtx_dcosx","NueRecord.srtrack.dcosXVtx");
+  chain->SetAlias("trk_vtx_dcosy","NueRecord.srtrack.dcosYVtx");
+  chain->SetAlias("trk_vtx_dcosz","NueRecord.srtrack.dcosZVtx");
+  chain->SetAlias("trk_endx","NueRecord.srtrack.endX");
+  chain->SetAlias("trk_endy","NueRecord.srtrack.endY");
+  chain->SetAlias("trk_endz","NueRecord.srtrack.endZ");
+  chain->SetAlias("trk_end_dcosx","NueRecord.srtrack.dcosXEnd");
+  chain->SetAlias("trk_end_dcosy","NueRecord.srtrack.dcosYEnd");
+  chain->SetAlias("trk_end_dcosz","NueRecord.srtrack.dcosZEnd");
+  chain->SetAlias("trk_rchi2","NueRecord.srtrack.reducedChi2");
+  chain->SetAlias("trk_fit_pass","NueRecord.srtrack.passedFit");
+  chain->SetAlias("trk_vtx_trace","NueRecord.srtrack.traceVtx");
+  chain->SetAlias("trk_vtxz_trace","NueRecord.srtrack.traceVtxZ");
+  chain->SetAlias("trk_end_trace","NueRecord.srtrack.traceEnd");
+  chain->SetAlias("trk_endz_trace","NueRecord.srtrack.traceEndZ");
+  chain->SetAlias("trk_end_MetersToBeam","NueRecord.srtrack.endMetersToBeam");
+  chain->SetAlias("trk_end_MetersToCoil","NueRecord.srtrack.endMetersToCoil");
+  chain->SetAlias("trk_end_MetersToCloseEdge","NueRecord.srtrack.endMetersToCloseEdge");
+  chain->SetAlias("trk_vtx_MetersToBeam","NueRecord.srtrack.vtxMetersToBeam");
+  chain->SetAlias("trk_vtx_MetersToCoil","NueRecord.srtrack.vtxMetersToCoil");
+  chain->SetAlias("trk_vtx_MetersToCloseEdge","NueRecord.srtrack.vtxMetersToCloseEdge");
+  chain->SetAlias("ntrklikeplanes","NueRecord.srtrack.trklikePlanes");
+  chain->SetAlias("trklikeRatio","NueRecord.srtrack.trklikeRatio");
+  chain->SetAlias("trk_pulseHeightRatio","NueRecord.srtrack.pulseHeightRatio");
+  chain->SetAlias("trk_ph_meu","NueRecord.srtrack.phMeu");
+  chain->SetAlias("trk_ph_nuegev","NueRecord.srtrack.phNueGeV");
+
+  //truth info:
+  chain->SetAlias("true_enu","NueRecord.mctrue.nuEnergy");
+  chain->SetAlias("true_vtxx","NueRecord.mctrue.nuVtxX");
+  chain->SetAlias("true_vtxy","NueRecord.mctrue.nuVtxY");
+  chain->SetAlias("true_vtxz","NueRecord.mctrue.nuVtxZ");
+  chain->SetAlias("true_dcosx","NueRecord.mctrue.nuDCosX");
+  chain->SetAlias("true_dcosy","NueRecord.mctrue.nuDCosY");
+  chain->SetAlias("true_dcosz","NueRecord.mctrue.nuDCosZ");
+  chain->SetAlias("tar_e","NueRecord.mctrue.targetEnergy");
+  chain->SetAlias("tar_px","NueRecord.mctrue.targetPX");
+  chain->SetAlias("tar_py","NueRecord.mctrue.targetPY");
+  chain->SetAlias("tar_pz","NueRecord.mctrue.targetPZ");
+  chain->SetAlias("inu","NueRecord.mctrue.nuFlavor");
+  chain->SetAlias("iaction","NueRecord.mctrue.interactionType");
+  chain->SetAlias("true_y","NueRecord.mctrue.hadronicY");
+  chain->SetAlias("true_eshw","NueRecord.mctrue.showerEnergy");
+  chain->SetAlias("true_shw_dcosx","NueRecord.mctrue.showerDCosX");
+  chain->SetAlias("true_shw_dcosy","NueRecord.mctrue.showerDCosY");
+  chain->SetAlias("true_shw_dcosz","NueRecord.mctrue.showerDCosZ");
+  chain->SetAlias("true_lep_p3","NueRecord.mctrue.leptonMomentum");
+  chain->SetAlias("true_lep_dcosx","NueRecord.mctrue.leptonDCosX");
+  chain->SetAlias("true_lep_dcosy","NueRecord.mctrue.leptonDCosY");
+  chain->SetAlias("true_lep_dcosz","NueRecord.mctrue.leptonDCosZ");
+  chain->SetAlias("true_noosc_enu","NueRecord.mctrue.nonOscNuEnergy");
+  chain->SetAlias("true_noosc_dcosx","NueRecord.mctrue.nonOscNuDCosX");
+  chain->SetAlias("true_noosc_dcosy","NueRecord.mctrue.nonOscNuDCosY");
+  chain->SetAlias("true_noosc_dcosz","NueRecord.mctrue.nonOscNuDCosZ");
+  chain->SetAlias("inunoosc","NueRecord.mctrue.nonOscNuFlavor");
+  chain->SetAlias("iresonance","NueRecord.mctrue.resonanceCode");
+  chain->SetAlias("initial_state","NueRecord.mctrue.initialState");
+  chain->SetAlias("true_a","NueRecord.mctrue.atomicWeight");
+  chain->SetAlias("true_z","NueRecord.mctrue.atomicNumber");
+  chain->SetAlias("true_x","NueRecord.mctrue.bjorkenX");
+  chain->SetAlias("true_q2","NueRecord.mctrue.q2");
+  chain->SetAlias("true_w2","NueRecord.mctrue.w2");
+  chain->SetAlias("true_sigma","NueRecord.mctrue.sigma");
+  chain->SetAlias("true_hfs","NueRecord.mctrue.hadronicFinalState");
+  chain->SetAlias("true_emfrac","NueRecord.mctrue.emShowerFraction");
+  chain->SetAlias("parent_x","NueRecord.mctrue.parentX");
+  chain->SetAlias("parent_Y","NueRecord.mctrue.parentY");
+  chain->SetAlias("parent_z","NueRecord.mctrue.parentZ");
+  chain->SetAlias("parent_px","NueRecord.mctrue.parentPX");
+  chain->SetAlias("parent_py","NueRecord.mctrue.parentPY");
+  chain->SetAlias("parent_pz","NueRecord.mctrue.parentPZ");
+  chain->SetAlias("parent_pid","NueRecord.mctrue.parentPID");
+  chain->SetAlias("parent_gen","NueRecord.mctrue.parentGen");
+  chain->SetAlias("target_exit_x","NueRecord.mctrue.targetExitX");
+  chain->SetAlias("target_exit_y","NueRecord.mctrue.targetExitY");
+  chain->SetAlias("target_exit_z","NueRecord.mctrue.targetExitZ");
+  chain->SetAlias("target_parent_px","NueRecord.mctrue.targetParentPX");
+  chain->SetAlias("target_parent_py","NueRecord.mctrue.targetParentPY");
+  chain->SetAlias("target_parent_pz","NueRecord.mctrue.targetParentPZ");
+  chain->SetAlias("target_parent_type","NueRecord.mctrue.targetParentType");
+  chain->SetAlias("nue_class","NueRecord.mctrue.fNueClass");
+  chain->SetAlias("osc_prob","NueRecord.mctrue.fOscProb");
+  chain->SetAlias("nue_weight","NueRecord.mctrue.fNueWeight");
+  chain->SetAlias("baseline","NueRecord.mctrue.Baseline");
+  chain->SetAlias("ue32","NueRecord.mctrue.Ue3Squared");
+  chain->SetAlias("dm2","NueRecord.mctrue.DeltamSquared23");
+  chain->SetAlias("theta23","NueRecord.mctrue.Theta23");
+
+
+  //beam monitoring info:
+  chain->SetAlias("goodbeam","NueRecord.bmon.goodBeamMon");
+  chain->SetAlias("bI","NueRecord.bmon.bI");
+  chain->SetAlias("tortgt","NueRecord.bmon.tortgt");
+  chain->SetAlias("trtgtd","NueRecord.bmon.trtgtd");
+  chain->SetAlias("tor101","NueRecord.bmon.tor101");
+  chain->SetAlias("tr101d","NueRecord.bmon.tr101d");
+  chain->SetAlias("hpos2","NueRecord.bmon.hpos2");
+  chain->SetAlias("vpos2","NueRecord.bmon.vpos2");
+  chain->SetAlias("hpos1","NueRecord.bmon.hpos1");
+  chain->SetAlias("vpos1","NueRecord.bmon.vpos1");
+  chain->SetAlias("hbw","NueRecord.bmon.hbw");
+  chain->SetAlias("vbw","NueRecord.bmon.vbw");
+  chain->SetAlias("htan","NueRecord.bmon.htan");
+  chain->SetAlias("vtan","NueRecord.bmon.vtan");
+  chain->SetAlias("hornI","NueRecord.bmon.hornI");
+  chain->SetAlias("nuTarZ","NueRecord.bmon.nuTarZ");
+  chain->SetAlias("bmon_time","NueRecord.bmon.time");
+  
+  chain->SetAlias("bmon_bmst_vts_sec","NueRecord.bmon.bmst_vts.fSec");
+  chain->SetAlias("bmon_bmst_vts_nsec","NueRecord.bmon.bmst_vts.fNanoSec");
+  chain->SetAlias("bmon_stnd_time","NueRecord.bmon.stnd_time");
+  chain->SetAlias("bmon_stnd_vts_sec","NueRecord.bmon.stnd_vts.fSec");
+  chain->SetAlias("bmon_stnd_vts_nsec","NueRecord.bmon.stnd_vts.fNanoSec");
+  chain->SetAlias("bmon_dt_bmst","NueRecord.bmon.dt_bmst");
+  chain->SetAlias("bmon_dt_stnd","NueRecord.bmon.dt_stnd");
+
+}

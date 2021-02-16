@@ -1,0 +1,74 @@
+//Input Number of POT
+BEGINDATA
+//  Methods: 1 -> 5 numbers, 2 -> 4 numbers, 1 hist, 3 -> files
+//  methods 1 and 2 will require POT at exposure and initial osc probs
+//  method 3 will let you scale numu, nue, and nutau file lists separately
+METHOD  1
+
+POT         9.25
+                                                                                
+Numu Number   { XX }
+Nutau Number  { XX }
+NC Number     { XX }
+BNue Number   { XX }
+SigNue Number { XX }
+
+OSCPAR {Ue3Square, DeltaM2_23}
+
+METHOD 2
+POT         9.25
+                                                                                
+Numu Number   { XX }
+Nutau Number  { XX }
+NC Number     { XX }
+BNue Number   { XX }
+SigNue Hist   { file, hist}
+                                                                                
+OSCPAR {Ue3Square, DeltaM2_23}  
+//or
+NOOSC
+
+METHOD 3
+
+FILE   {file}
+
+ENDDATA
+
+BEGINPAR
+//Oscillation parameters that can change
+DELTAM2_23     {0.1, 5.0}
+SIN2(2TH13)    {0.0, 0.4}
+DELTACP        {0.0, 2.0}
+
+//Fixed oscillation parameters 
+DELTAM2_12       8.7
+SIN2(2TH23)      1.0
+SIN2(2TH12)      0.816
+DENSITY          2.65
+
+ENDPAR
+
+                                                                        
+BEGINSET
+//Ways to Introduce Error into the System
+BG_SYSTEMATIC   0.10
+SIG_SYSTEMATIC  0.00
+NCSCALE         0.00
+NUMUSCALE       0.00
+BNUESCALE       0.00
+NUTAUSCALE      0.00
+SIGNUESCALE     0.00
+ENDSET
+
+BEGINSET
+//Ways to Introduce Error into the System
+BG_SYSTEMATIC   0.10
+SIG_SYSTEMATIC  0.00
+NCSCALE         0.50
+NUMUSCALE       0.00
+BNUESCALE       0.00
+NUTAUSCALE      0.00
+SIGNUESCALE     0.00 
+ENDSET
+
+
